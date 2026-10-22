@@ -32,6 +32,22 @@ input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;
 @media(max-width:850px){.topbar{min-height:75px}.hero{gap:30px;grid-template-columns:1fr 1fr}.hero h1{font-size:clamp(35px,5.4vw,60px)}.description{font-size:12px;line-height:1.85}.player-inner{grid-template-columns:minmax(110px,1fr) minmax(260px,1.5fr);gap:8px}.extra-controls{display:none}}
 @media(max-width:640px){:root{--player-h:140px}.wrap{width:calc(100% - 34px);padding-bottom:calc(var(--player-h) + 48px)}.topbar{min-height:62px}.brand{font-size:12px;letter-spacing:.19em}.topnote{display:none}.tag{font-size:9px;padding:6px 9px}.hero{padding:29px 0 42px;display:flex;flex-direction:column;align-items:stretch;gap:25px}.coverframe{max-width:min(490px,100%);margin:0 auto}.hero h1{font-size:clamp(41px,13vw,67px);margin:13px 0 10px}.hero .byline{margin-bottom:18px}.eyebrow{font-size:9px}.description{font-size:12px;line-height:1.8;max-width:500px;margin-bottom:18px}.metadata{margin-bottom:18px}.meta-pill{font-size:10px;padding:7px 11px}.hero-buttons>*{flex:1;padding:12px 13px;min-height:46px}.sectionhead h2{font-size:18px}.sectionhead p{font-size:10px}.track{grid-template-columns:22px 46px minmax(0,1fr) 40px;gap:10px;padding:10px 12px;min-height:69px}.art{height:46px;width:46px}.name{font-size:13px}.duration{font-size:11px}.bonus-tracks .track{grid-template-columns:22px 46px minmax(0,1fr) 40px}.bonushead{margin-top:31px}.player-inner{width:calc(100% - 32px);display:flex;flex-direction:column;gap:10px;align-items:stretch;min-height:132px;padding-top:11px}.active-info{height:42px}.active-cover{width:42px;height:42px}.active-title{font-size:12px}.active-artist{font-size:10px;margin-top:2px}.center-controls{display:flex;flex-direction:column-reverse;gap:8px}.timebar{grid-template-columns:36px minmax(0,1fr) 36px;gap:7px}.timebar span{font-size:10px}.control-buttons{gap:21px}.iconbutton{padding:0}.iconbutton svg{width:17px;height:17px}.playbutton{width:34px;height:34px}.status{bottom:calc(var(--player-h) + 10px)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Discography menu — future releases are visible from day one. */
+.topbar{position:relative;z-index:25}.discography-nav{position:relative;margin-left:auto;letter-spacing:normal;flex-shrink:0}
+.release-toggle{display:flex;align-items:center;justify-content:center;gap:7px;background:transparent;white-space:nowrap;min-height:34px;transition:background .18s,border-color .18s}
+.release-toggle:hover,.release-toggle[aria-expanded="true"]{background:#ba83f91c;border-color:#c997ed88}.menu-chevron{font-size:18px;line-height:10px;position:relative;top:-2px;color:#d4b1ee}
+.release-menu{position:absolute;right:0;top:calc(100% + 13px);width:min(290px,calc(100vw - 34px));padding:12px;border:1px solid #704d8e;background:#1a1126f7;box-shadow:0 20px 55px #000b;border-radius:16px;z-index:30;backdrop-filter:blur(22px)}
+.release-menu-heading{font-size:9px;letter-spacing:.24em;color:#ad94c4;padding:7px 10px 9px}
+.release-menu-item{width:100%;display:flex;align-items:center;gap:12px;min-height:62px;padding:10px 9px;text-align:left;color:#f5e9ff;background:transparent;border:0;border-radius:10px;letter-spacing:normal}
+.release-menu-item+.release-menu-item{border-top:1px solid #ffffff12;border-radius:0}.release-menu-item:hover,.release-menu-item[aria-current="page"]{background:#b582eb13}
+.menu-record-icon{font-size:22px;color:#bd83eb;width:25px;text-align:center}.release-menu-text{display:flex;flex-direction:column;gap:5px;flex:1}.release-menu-text strong{font-size:12px;letter-spacing:.08em}.release-menu-text small{font-size:10px;letter-spacing:.09em;color:#ac99bf}
+.release-indicator{font-size:13px;color:#d3aaff;min-width:17px;text-align:center}
+/* Tappable album art, no visual changes to the artwork itself. */
+.cover-toggle{display:block;width:100%;padding:0;margin:0;background:transparent;border:0;text-align:inherit;border-radius:0;cursor:pointer}.cover-toggle:focus-visible{outline:2px solid #e7c3ff;outline-offset:7px}
+.cover-hint{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:17px;letter-spacing:.22em;color:#b7a4c6;font-size:10px;white-space:nowrap}.cover-hint .switch-arrows{color:#d7a6fa;font-size:18px;line-height:1}.cover-hint .mode-label{opacity:.55;transition:opacity .2s,color .2s}.cover-hint .mode-label.is-active{opacity:1;color:#dfb5fb}.cover-hint-tap{margin-left:10px;letter-spacing:.12em;opacity:.67;font-size:8px}
+.coming-soon{min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 15px 130px}.soon-eyebrow{font-size:11px;letter-spacing:.3em;color:#c6a0e8}.coming-soon h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(43px,8vw,88px);font-weight:400;line-height:1.1;margin:28px 0 15px}.soon-status{font-size:13px;letter-spacing:.34em;color:#d2a5f3}.soon-description{font-size:13px;color:#c9bcd2;line-height:2;margin:16px 0 35px}.soon-back{padding:13px 24px}
+@media(max-width:640px){.release-menu{top:calc(100% + 12px)}.cover-hint{margin-top:15px;font-size:9px;gap:6px}.cover-hint-tap{font-size:8px;margin-left:6px}.coming-soon{min-height:50vh;padding:80px 10px 115px}.soon-description{font-size:12px}}
 </style>
 </head><body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
@@ -45,18 +61,38 @@ input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;
 <symbol id="ic-volume-off" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5zm5 4 6 6m0-6-6 6"/></symbol>
 </defs></svg>
 <div class="wrap">
-<header class="topbar"><div class="brand"><span class="brandmark" aria-hidden="true"></span>XENO <span style="opacity:.35;font-weight:300">/</span> MUSIC</div><div class="topnote">An album to keep with you.</div><div class="tag">1st ALBUM</div></header>
+<header class="topbar"><div class="brand"><span class="brandmark" aria-hidden="true"></span>XENO <span style="opacity:.35;font-weight:300">/</span> MUSIC</div><div class="topnote">An album to keep with you.</div>
+  <nav class="discography-nav" id="discographyNav" aria-label="作品切替">
+    <button class="tag release-toggle" id="releaseMenuButton" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="releaseMenu"><span id="releaseMenuLabel">1st ALBUM</span><span class="menu-chevron" aria-hidden="true">⌄</span></button>
+    <div class="release-menu hidden" id="releaseMenu" role="menu" aria-label="ディスコグラフィー">
+      <div class="release-menu-heading">DISCOGRAPHY</div>
+      <button class="release-menu-item" type="button" data-release="afterword" role="menuitem" aria-current="page"><span class="menu-record-icon" aria-hidden="true">◉</span><span class="release-menu-text"><strong>1st ALBUM</strong><small>AFTERWORD</small></span><span class="release-indicator" aria-hidden="true">✓</span></button>
+      <button class="release-menu-item" type="button" data-release="second" role="menuitem"><span class="menu-record-icon" aria-hidden="true">◉</span><span class="release-menu-text"><strong>2nd ALBUM</strong><small>COMING SOON</small></span><span class="release-indicator" aria-hidden="true"></span></button>
+      <button class="release-menu-item" type="button" data-release="singles" role="menuitem"><span class="menu-record-icon" aria-hidden="true">♫</span><span class="release-menu-text"><strong>SINGLES</strong><small>COMING SOON</small></span><span class="release-indicator" aria-hidden="true"></span></button>
+    </div>
+  </nav>
+</header>
 <main>
-<section class="hero" aria-labelledby="albumtitle">
-  <div class="coverframe"><img id="heroCover" class="album-cover" src="covers/album.png" width="1536" height="1536" alt="AFTERWORD — XENO 1st ALBUM メインジャケット" fetchpriority="high"></div>
-  <div class="hero-text"><div class="eyebrow">XENO · 1ST ALBUM</div><h1 id="albumtitle">AFTERWORD</h1><p class="byline">WORDS &amp; MUSIC BY SHOTA ARASHIDA</p>
-  <p class="description">物語の余韻を、一曲ずつ。<br>さまざまな物語から生まれた全16曲と、特別なボーナストラックを収録。ジャケットを眺めながら、アルバムを最初から最後まで。</p>
-  <div class="metadata"><span class="meta-pill">16 TRACKS</span><span class="meta-pill">+ BONUS TRACK</span><span class="meta-pill" id="albumDuration">TOTAL —</span></div>
+<section class="hero" id="albumHero" aria-labelledby="albumtitle">
+  <div class="coverframe">
+    <button class="cover-toggle" type="button" id="coverToggle" aria-label="再生中の曲のジャケットに切り替える"><img id="heroCover" class="album-cover" src="covers/album.png" width="1536" height="1536" alt="AFTERWORD — XENO 1st ALBUM メインジャケット" fetchpriority="high"></button>
+    <div class="cover-hint" aria-hidden="true"><span id="albumModeLabel" class="mode-label is-active">ALBUM</span><span class="switch-arrows">⇄</span><span id="trackModeLabel" class="mode-label">TRACK</span> <span class="cover-hint-tap">TAP TO SWITCH</span></div>
+  </div>
+  <div class="hero-text"><div class="eyebrow" id="albumEyebrow">XENO · 1ST ALBUM</div><h1 id="albumtitle">AFTERWORD</h1><p class="byline" id="albumCredits">WORDS &amp; MUSIC BY SHOTA ARASHIDA</p>
+  <p class="description" id="albumDescription">さまざまな物語から生まれた全16曲と、特別なボーナストラックを収録。<br>現在、ボーカリスト募集中。</p>
+  <div class="metadata"><span class="meta-pill" id="trackCount">16 TRACKS</span><span class="meta-pill" id="bonusCount">+ BONUS TRACK</span><span class="meta-pill" id="albumDuration">TOTAL —</span></div>
   <div class="hero-buttons"><button class="primary" id="playAll"><svg aria-hidden="true"><use href="#ic-play"></use></svg><span>アルバムを再生</span></button><button class="secondary" id="showTracks">曲一覧を見る ↓</button></div>
   </div>
 </section>
-<section id="tracksection" aria-label="収録曲"><div class="sectionhead"><h2>TRACKLIST</h2><p>01 — 16</p></div><div class="tracklist" id="regularTracks"></div>
-  <div class="sectionhead bonushead"><h2>BONUS TRACK</h2><p>SPECIAL EDITION</p></div><p class="bonustext">特別収録：奉仕活動☆タダ働き部</p><div class="tracklist bonus-tracks" id="bonusTracks"></div>
+<section id="tracksection" aria-label="収録曲"><div class="sectionhead"><h2>TRACKLIST</h2><p id="trackRange">01 — 16</p></div><div class="tracklist" id="regularTracks"></div>
+  <div id="bonusSection"><div class="sectionhead bonushead"><h2>BONUS TRACK</h2><p>SPECIAL EDITION</p></div><p class="bonustext" id="bonusDescription">特別収録：奉仕活動☆タダ働き部</p><div class="tracklist bonus-tracks" id="bonusTracks"></div></div>
+</section>
+<section class="coming-soon hidden" id="comingSoonView" aria-labelledby="comingSoonTitle" aria-live="polite">
+  <span class="soon-eyebrow" id="comingSoonEyebrow">XENO / MUSIC</span>
+  <h1 id="comingSoonTitle">2nd ALBUM</h1>
+  <p class="soon-status">COMING SOON</p>
+  <p class="soon-description">次の作品を準備中。</p>
+  <button class="secondary soon-back" type="button" id="backToAfterword">← AFTERWORDに戻る</button>
 </section>
 <footer class="footer">AFTERWORD — XENO 1ST ALBUM</footer>
 </main></div>
@@ -74,30 +110,143 @@ input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;
 </div></div><div class="status hidden" id="status" role="alert"></div>
 <script>
 'use strict';
-const TRACKS = [{"number":1,"title":"ルミナス","src":"audio/01.mp3","cover":"covers/01.png","seconds":301.2,"bonus":false},{"number":2,"title":"OFF SCRIPT","src":"audio/02.mp3","cover":"covers/02.png","seconds":226.632,"bonus":false},{"number":3,"title":"喝采","src":"audio/03.mp3","cover":"covers/03.png","seconds":196.68,"bonus":false},{"number":4,"title":"クロノス","src":"audio/04.mp3","cover":"covers/04.png","seconds":229.68,"bonus":false},{"number":5,"title":"DETOUR","src":"audio/05.mp3","cover":"covers/05.png","seconds":219.984,"bonus":false},{"number":6,"title":"それでも君を。","src":"audio/06.mp3","cover":"covers/06.png","seconds":323.304,"bonus":false},{"number":7,"title":"BEFORE I FORGET","src":"audio/07.mp3","cover":"covers/07.png","seconds":246.84,"bonus":false},{"number":8,"title":"PANDORA","src":"audio/08.mp3","cover":"covers/08.png","seconds":236.04,"bonus":false},{"number":9,"title":"アンブラ","src":"audio/09.mp3","cover":"covers/09.png","seconds":255.024,"bonus":false},{"number":10,"title":"絶望の旋律","src":"audio/10.mp3","cover":"covers/10.png","seconds":333.24,"bonus":false},{"number":11,"title":"不可逆","src":"audio/11.mp3","cover":"covers/11.png","seconds":252.312,"bonus":false},{"number":12,"title":"RE:VERSE","src":"audio/12.mp3","cover":"covers/12.png","seconds":231.24,"bonus":false},{"number":13,"title":"HARUKAGE","src":"audio/13.mp3","cover":"covers/13.jpg","seconds":234.0,"bonus":false},{"number":14,"title":"カムパネルラ","src":"audio/14.mp3","cover":"covers/14.png","seconds":232.56,"bonus":false},{"number":15,"title":"OUTLIER","src":"audio/15.mp3","cover":"covers/15.png","seconds":228.744,"bonus":false},{"number":16,"title":"GIFT OF TIME","src":"audio/16.mp3","cover":"covers/16.png","seconds":273.624,"bonus":false},{"number":17,"title":"奉仕活動☆タダ働き部","src":"audio/17.mp3","cover":"covers/album.png","seconds":320.832,"bonus":true}];
+const TRACKS = [{"number":1,"title":"ルミナス","src":"audio/01.mp3","cover":"covers/01.png","seconds":301.2,"bonus":false},{"number":2,"title":"OFF SCRIPT","src":"audio/02.mp3","cover":"covers/02.png","seconds":226.632,"bonus":false},{"number":3,"title":"喝采","src":"audio/03.mp3","cover":"covers/03.png","seconds":196.68,"bonus":false},{"number":4,"title":"クロノス","src":"audio/04.mp3","cover":"covers/04.png","seconds":229.68,"bonus":false},{"number":5,"title":"DETOUR","src":"audio/05.mp3","cover":"covers/05.png","seconds":219.984,"bonus":false},{"number":6,"title":"それでも君を。","src":"audio/06.mp3","cover":"covers/06.png","seconds":323.304,"bonus":false},{"number":7,"title":"BEFORE I FORGET","src":"audio/07.mp3","cover":"covers/07.png","seconds":246.84,"bonus":false},{"number":8,"title":"PANDORA","src":"audio/08.mp3","cover":"covers/08.png","seconds":236.04,"bonus":false},{"number":9,"title":"アンブラ","src":"audio/09.mp3","cover":"covers/09.png","seconds":255.024,"bonus":false},{"number":10,"title":"絶望の旋律","src":"audio/10.mp3","cover":"covers/10.png","seconds":333.24,"bonus":false},{"number":11,"title":"不可逆","src":"audio/11.mp3","cover":"covers/11.png","seconds":252.312,"bonus":false},{"number":12,"title":"RE:VERSE","src":"audio/12.mp3","cover":"covers/12.png","seconds":231.24,"bonus":false},{"number":13,"title":"HARUKAGE","src":"audio/13.mp3","cover":"covers/13.jpg","seconds":234.0,"bonus":false},{"number":14,"title":"カムパネルラ","src":"audio/14.mp3","cover":"covers/14.png","seconds":232.56,"bonus":false},{"number":15,"title":"OUTLIER","src":"audio/15.mp3","cover":"covers/15.png","seconds":228.744,"bonus":false},{"number":16,"title":"GIFT OF TIME","src":"audio/16.mp3","cover":"covers/16.png","seconds":273.624,"bonus":false},{"number":17,"title":"奉仕活動☆タダ働き部","src":"audio/17.mp3","cover":"covers/17.png","seconds":320.832,"bonus":true}];
+
+// ====== RELEASE SETTINGS (今後の新作はここで管理) ======
+// 2nd ALBUM / SINGLES は最初からメニューに表示。
+// 公開時は cover, description, credits を設定し tracks に曲データを追加する。
+// 例: {number:1,title:'SONG',src:'audio/second/01.mp3',cover:'covers/second/01.png',seconds:240,bonus:false}
+// tracks が空の間は COMING SOON を表示し、プレイヤーは従来どおり動作します。
+const RELEASES = {
+  afterword: {
+    label:'1st ALBUM',title:'AFTERWORD',eyebrow:'XENO · 1ST ALBUM',
+    credits:'WORDS & MUSIC BY SHOTA ARASHIDA',
+    description:'さまざまな物語から生まれた全16曲と、特別なボーナストラックを収録。\n現在、ボーカリスト募集中。',
+    cover:'covers/album.png', tracks:TRACKS
+  },
+  second: {
+    label:'2nd ALBUM',title:'2nd ALBUM',eyebrow:'XENO · 2ND ALBUM',
+    credits:'WORDS & MUSIC BY SHOTA ARASHIDA',
+    description:'次の作品を準備中。',cover:'covers/second/album.png',
+    tracks:[]
+  },
+  singles: {
+    label:'SINGLES',title:'SINGLES',eyebrow:'XENO · SINGLES',
+    credits:'WORDS & MUSIC BY SHOTA ARASHIDA',
+    description:'新しいリリースをお楽しみに。',cover:'covers/singles/album.png',
+    tracks:[]
+  }
+};
+let activeRelease='afterword', displayedRelease='afterword', ACTIVE_TRACKS=TRACKS;
+let artworkMode='album';
 const AUDIO = document.querySelector('#audio');
 const $=id=>document.getElementById(id);
 const fmt=n=>{if(!Number.isFinite(n))return '0:00';let m=Math.floor(n/60),s=Math.floor(n%60);return `${m}:${String(s).padStart(2,'0')}`};
 const fmtTotal=n=>{const h=Math.floor(n/3600),m=Math.floor((n%3600)/60);return h?`${h}時間${m}分`:`${m}分`};
 const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let current=0;let initialized=false;let shuffle=false;let repeat='off';let playing=false;let lastVolume=0.85;
-$('albumDuration').textContent='TOTAL '+fmtTotal(TRACKS.reduce((a,t)=>a+t.seconds,0));
-function createTrack(t){const i=t.number-1;const row=document.createElement('button');row.type='button';row.className='track';row.dataset.index=i;row.setAttribute('aria-label',`${t.number} ${t.title}、${fmt(t.seconds)}`);
-row.innerHTML=`<span class="num" id="n${i}">${String(t.number).padStart(2,'0')}</span><img class="art" src="${t.cover}" alt="" loading="lazy" width="54" height="54"><span class="name">${escapeHTML(t.title)}<span class="type">${t.bonus?'BONUS TRACK':'XENO · AFTERWORD'}</span></span><span class="duration">${fmt(t.seconds)}</span>`;
-row.addEventListener('click',()=>loadTrack(i,true));return row;}
-TRACKS.filter(t=>!t.bonus).forEach(t=>$('regularTracks').appendChild(createTrack(t)));
-TRACKS.filter(t=>t.bonus).forEach(t=>$('bonusTracks').appendChild(createTrack(t)));
+function fallbackImage(img, fallback){
+  img.onerror=()=>{img.onerror=null;if(img.getAttribute('src')!==fallback)img.src=fallback;};
+}
+function setMainArtwork(){
+  const release=RELEASES[activeRelease];
+  const track=ACTIVE_TRACKS[current];
+  const showTrack=Boolean(initialized && artworkMode==='track' && track);
+  const art=$('heroCover');
+  fallbackImage(art,release.cover);
+  art.src=showTrack?track.cover:release.cover;
+  art.alt=showTrack?`${track.title} のジャケット`:`${release.title} のアルバムジャケット`;
+  $('coverToggle').setAttribute('aria-label',showTrack?'アルバムジャケットに切り替える':'再生中の曲のジャケットに切り替える');
+  $('albumModeLabel').classList.toggle('is-active',!showTrack);
+  $('trackModeLabel').classList.toggle('is-active',showTrack);
+}
+function createTrack(t,i){
+  const number=t.number??i+1;
+  const row=document.createElement('button');row.type='button';row.className='track';row.dataset.index=i;
+  row.setAttribute('aria-label',`${number} ${t.title}、${fmt(t.seconds)}`);
+  row.innerHTML=`<span class="num" id="n${i}">${String(number).padStart(2,'0')}</span><img class="art" src="${escapeHTML(t.cover)}" alt="" loading="lazy" width="54" height="54"><span class="name">${escapeHTML(t.title)}<span class="type">${t.bonus?'BONUS TRACK':`XENO · ${escapeHTML(RELEASES[activeRelease].title)}`}</span></span><span class="duration">${fmt(t.seconds)}</span>`;
+  fallbackImage(row.querySelector('.art'),RELEASES[activeRelease].cover);
+  row.addEventListener('click',()=>loadTrack(i,true));return row;
+}
+function renderTrackList(){
+  const regular=$('regularTracks'),bonus=$('bonusTracks');
+  regular.replaceChildren();bonus.replaceChildren();
+  ACTIVE_TRACKS.forEach((t,i)=>(t.bonus?bonus:regular).appendChild(createTrack(t,i)));
+  const regularCount=ACTIVE_TRACKS.filter(t=>!t.bonus).length;
+  const bonusCount=ACTIVE_TRACKS.length-regularCount;
+  $('trackCount').textContent=`${regularCount} TRACK${regularCount===1?'':'S'}`;
+  $('bonusCount').classList.toggle('hidden',bonusCount===0);
+  $('bonusCount').textContent=`+ ${bonusCount===1?'BONUS TRACK':`${bonusCount} BONUS TRACKS`}`;
+  $('bonusSection').classList.toggle('hidden',bonusCount===0);
+  $('bonusDescription').textContent=bonusCount?`特別収録：${ACTIVE_TRACKS.filter(t=>t.bonus).map(t=>t.title).join(' / ')}`:'';
+  $('trackRange').textContent=`01 — ${String(regularCount).padStart(2,'0')}`;
+  $('albumDuration').textContent='TOTAL '+fmtTotal(ACTIVE_TRACKS.reduce((total,t)=>total+(Number(t.seconds)||0),0));
+}
+function setMenuState(){
+  const r=RELEASES[displayedRelease];
+  $('releaseMenuLabel').textContent=r.label;
+  document.querySelectorAll('[data-release]').forEach(item=>{
+    const which=item.dataset.release,selected=which===displayedRelease;
+    if(selected)item.setAttribute('aria-current','page');else item.removeAttribute('aria-current');
+    item.querySelector('.release-indicator').textContent=selected?'✓':'';
+    const sub=item.querySelector('small');sub.textContent=RELEASES[which].tracks.length?RELEASES[which].title:'COMING SOON';
+  });
+}
+function closeReleaseMenu(){ $('releaseMenu').classList.add('hidden');$('releaseMenuButton').setAttribute('aria-expanded','false'); }
+function openReleaseMenu(){ $('releaseMenu').classList.remove('hidden');$('releaseMenuButton').setAttribute('aria-expanded','true'); }
+$('releaseMenuButton').addEventListener('click',()=>{$('releaseMenu').classList.contains('hidden')?openReleaseMenu():closeReleaseMenu();});
+document.addEventListener('pointerdown',e=>{if(!$('discographyNav').contains(e.target))closeReleaseMenu()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeReleaseMenu()});
+function showRelease(id){
+  const r=RELEASES[id];if(!r)return;
+  closeReleaseMenu();displayedRelease=id;setMenuState();
+  const coming=!r.tracks.length;
+  $('comingSoonView').classList.toggle('hidden',!coming);
+  $('albumHero').classList.toggle('hidden',coming);
+  $('tracksection').classList.toggle('hidden',coming);
+  if(coming){
+    $('comingSoonTitle').textContent=r.title;
+    $('comingSoonEyebrow').textContent=r.eyebrow;
+    document.querySelector('.soon-description').textContent=r.description;
+    document.title=`${r.label} — COMING SOON | XENO`;
+  }else if(activeRelease!==id){
+    AUDIO.pause();AUDIO.removeAttribute('src');AUDIO.load();
+    activeRelease=id;ACTIVE_TRACKS=r.tracks;initialized=false;playing=false;current=0;artworkMode='album';
+    $('albumEyebrow').textContent=r.eyebrow;
+    $('albumtitle').textContent=r.title;
+    $('albumCredits').textContent=r.credits;
+    $('albumDescription').textContent=r.description;
+    $('activeTitle').textContent=r.title;
+    $('activeArtist').textContent=r.eyebrow;
+    $('activeCover').src=r.cover;
+    $('totalTime').textContent='0:00';$('currentTime').textContent='0:00';
+    $('seek').value=0;$('seek').style.setProperty('--fill','0%');
+    document.querySelector('.footer').textContent=`${r.title} — ${r.eyebrow}`;
+    renderTrackList();setMainArtwork();updatePlayIcon();updateSelection();
+    document.title=`${r.title} | XENO`;
+  }else{
+    document.title=initialized?`${ACTIVE_TRACKS[current].title} | ${r.title}`:`${r.title} | XENO`;
+  }
+  window.scrollTo({top:0,behavior:'instant'});
+}
+document.querySelectorAll('[data-release]').forEach(item=>item.addEventListener('click',()=>showRelease(item.dataset.release)));
+$('backToAfterword').addEventListener('click',()=>showRelease('afterword'));
+$('coverToggle').addEventListener('click',()=>{
+  if(!initialized){showStatus('曲を再生すると、ジャケットを切り替えられます。');return;}
+  artworkMode=artworkMode==='track'?'album':'track';setMainArtwork();
+});
+renderTrackList();setMenuState();setMainArtwork();
 function showStatus(message){const el=$('status');el.textContent=message;el.classList.remove('hidden');clearTimeout(showStatus.timer);showStatus.timer=setTimeout(()=>el.classList.add('hidden'),5500)}
 function updatePlayIcon(){ $('playPauseIcon').setAttribute('href',playing?'#ic-pause':'#ic-play');$('playPause').setAttribute('aria-label',playing?'一時停止':'再生');}
 function updateSelection(){document.querySelectorAll('.track').forEach(row=>{const idx=Number(row.dataset.index);const selected=idx===current && initialized;row.classList.toggle('is-current',selected);row.setAttribute('aria-current',selected?'true':'false');const num=$('n'+idx);num.innerHTML=selected&&playing?'<span class="now-wave" aria-hidden="true"><i></i><i></i><i></i></span>':String(idx+1).padStart(2,'0');});}
-function setMediaSession(t){if(!('mediaSession' in navigator))return;try{navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:'XENO',album:'AFTERWORD',artwork:[{src:new URL(t.cover,location.href).href,sizes:'1536x1536',type:t.cover.endsWith('.jpg')?'image/jpeg':'image/png'}]});}catch(e){} }
+function setMediaSession(t){if(!('mediaSession' in navigator))return;try{navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:'XENO',album:RELEASES[activeRelease].title,artwork:[{src:new URL(t.cover,location.href).href,sizes:'1536x1536',type:t.cover.endsWith('.jpg')?'image/jpeg':'image/png'}]});}catch(e){} }
 async function play(){if(!initialized){loadTrack(0,true);return;}try{await AUDIO.play();}catch(e){playing=false;updatePlayIcon();updateSelection();showStatus('音声を再生できません。ZIPを展開して index.html を開くか、Webサーバーで公開してください。');}}
 function pause(){AUDIO.pause()}
-function loadTrack(idx,shouldPlay=false){if(idx<0||idx>=TRACKS.length)return;current=idx;initialized=true;const t=TRACKS[current];const wasPlaying=playing;AUDIO.pause();AUDIO.src=t.src;AUDIO.load();$('activeCover').src=t.cover;$('heroCover').src=t.cover;$('heroCover').alt=`${t.title} のジャケット`;$('activeTitle').textContent=t.title;$('activeArtist').textContent=t.bonus?'XENO · BONUS TRACK':'XENO · AFTERWORD';$('totalTime').textContent=fmt(t.seconds);$('currentTime').textContent='0:00';$('seek').value=0;$('seek').style.setProperty('--fill','0%');document.title=`${t.title} | AFTERWORD`;
+function loadTrack(idx,shouldPlay=false){if(idx<0||idx>=ACTIVE_TRACKS.length)return;current=idx;initialized=true;const t=ACTIVE_TRACKS[current];const wasPlaying=playing;AUDIO.pause();AUDIO.src=t.src;AUDIO.load();fallbackImage($('activeCover'),RELEASES[activeRelease].cover);$('activeCover').src=t.cover;artworkMode='track';setMainArtwork();$('activeTitle').textContent=t.title;$('activeArtist').textContent=t.bonus?'XENO · BONUS TRACK':`XENO · ${RELEASES[activeRelease].title}`;$('totalTime').textContent=fmt(t.seconds);$('currentTime').textContent='0:00';$('seek').value=0;$('seek').style.setProperty('--fill','0%');document.title=`${t.title} | ${RELEASES[activeRelease].title}`;
 setMediaSession(t);updateSelection();if(shouldPlay||wasPlaying)play();}
 function nextTrack(automatic=false){if(repeat==='one'&&automatic){AUDIO.currentTime=0;play();return;}
-let idx;if(shuffle&&TRACKS.length>1){idx=current;while(idx===current)idx=Math.floor(Math.random()*TRACKS.length);}else{idx=current+1;if(idx>=TRACKS.length){if(repeat==='all')idx=0;else{pause();AUDIO.currentTime=0;return;}}}loadTrack(idx,true);}
-function prevTrack(){if(!initialized){loadTrack(0,true);return;}if(AUDIO.currentTime>3){AUDIO.currentTime=0;return;}loadTrack(current>0?current-1:(repeat==='all'?TRACKS.length-1:0),true);}
+let idx;if(shuffle&&ACTIVE_TRACKS.length>1){idx=current;while(idx===current)idx=Math.floor(Math.random()*ACTIVE_TRACKS.length);}else{idx=current+1;if(idx>=ACTIVE_TRACKS.length){if(repeat==='all')idx=0;else{pause();AUDIO.currentTime=0;return;}}}loadTrack(idx,true);}
+function prevTrack(){if(!initialized){loadTrack(0,true);return;}if(AUDIO.currentTime>3){AUDIO.currentTime=0;return;}loadTrack(current>0?current-1:(repeat==='all'?ACTIVE_TRACKS.length-1:0),true);}
 $('playAll').onclick=()=>loadTrack(0,true);
 $('showTracks').onclick=()=>$('tracksection').scrollIntoView({behavior:'smooth'});
 $('playPause').onclick=()=>playing?pause():play();$('next').onclick=()=>nextTrack(false);$('prev').onclick=prevTrack;
@@ -107,9 +256,9 @@ AUDIO.volume=Number($('volume').value);
 $('volume').oninput=e=>{AUDIO.volume=Number(e.target.value);lastVolume=AUDIO.volume||lastVolume;AUDIO.muted=false;$('volume').style.setProperty('--fill',`${AUDIO.volume*100}%`);updateVolumeIcon();};
 function updateVolumeIcon(){$('volumeIcon').setAttribute('href',AUDIO.muted||AUDIO.volume===0?'#ic-volume-off':'#ic-volume');$('mute').setAttribute('aria-label',AUDIO.muted||AUDIO.volume===0?'ミュート解除':'ミュート');}
 $('mute').onclick=()=>{AUDIO.muted=!AUDIO.muted;updateVolumeIcon();};
-$('seek').oninput=e=>{const dur=Number.isFinite(AUDIO.duration)?AUDIO.duration:TRACKS[current].seconds;if(!initialized)return;AUDIO.currentTime=dur*Number(e.target.value)/1000;$('seek').style.setProperty('--fill',`${Number(e.target.value)/10}%`);};
-AUDIO.addEventListener('timeupdate',()=>{const dur=Number.isFinite(AUDIO.duration)?AUDIO.duration:(TRACKS[current].seconds||0),now=AUDIO.currentTime||0;$('currentTime').textContent=fmt(now);if(dur>0){$('seek').value=Math.min(1000,Math.floor(now/dur*1000));$('seek').style.setProperty('--fill',`${now/dur*100}%`);}});
-AUDIO.addEventListener('loadedmetadata',()=>{$('totalTime').textContent=fmt(AUDIO.duration||TRACKS[current].seconds)});
+$('seek').oninput=e=>{const dur=Number.isFinite(AUDIO.duration)?AUDIO.duration:ACTIVE_TRACKS[current].seconds;if(!initialized)return;AUDIO.currentTime=dur*Number(e.target.value)/1000;$('seek').style.setProperty('--fill',`${Number(e.target.value)/10}%`);};
+AUDIO.addEventListener('timeupdate',()=>{const dur=Number.isFinite(AUDIO.duration)?AUDIO.duration:(ACTIVE_TRACKS[current].seconds||0),now=AUDIO.currentTime||0;$('currentTime').textContent=fmt(now);if(dur>0){$('seek').value=Math.min(1000,Math.floor(now/dur*1000));$('seek').style.setProperty('--fill',`${now/dur*100}%`);}});
+AUDIO.addEventListener('loadedmetadata',()=>{$('totalTime').textContent=fmt(AUDIO.duration||ACTIVE_TRACKS[current].seconds)});
 AUDIO.addEventListener('play',()=>{playing=true;updatePlayIcon();updateSelection();});
 AUDIO.addEventListener('pause',()=>{playing=false;updatePlayIcon();updateSelection();});
 AUDIO.addEventListener('ended',()=>nextTrack(true));
