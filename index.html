@@ -48,8 +48,8 @@ input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;
 <header class="topbar"><div class="brand"><span class="brandmark" aria-hidden="true"></span>XENO <span style="opacity:.35;font-weight:300">/</span> MUSIC</div><div class="topnote">An album to keep with you.</div><div class="tag">1st ALBUM</div></header>
 <main>
 <section class="hero" aria-labelledby="albumtitle">
-  <div class="coverframe"><img class="album-cover" src="covers/album.png" width="1536" height="1536" alt="AFTERWORD — XENO 1st ALBUM メインジャケット" fetchpriority="high"></div>
-  <div class="hero-text"><div class="eyebrow">XENO · 1ST ALBUM</div><h1 id="albumtitle">AFTERWORD</h1><p class="byline">THE STORIES THAT REMAIN</p>
+  <div class="coverframe"><img id="heroCover" class="album-cover" src="covers/album.png" width="1536" height="1536" alt="AFTERWORD — XENO 1st ALBUM メインジャケット" fetchpriority="high"></div>
+  <div class="hero-text"><div class="eyebrow">XENO · 1ST ALBUM</div><h1 id="albumtitle">AFTERWORD</h1><p class="byline">WORDS &amp; MUSIC BY SHOTA ARASHIDA</p>
   <p class="description">物語の余韻を、一曲ずつ。<br>さまざまな物語から生まれた全16曲と、特別なボーナストラックを収録。ジャケットを眺めながら、アルバムを最初から最後まで。</p>
   <div class="metadata"><span class="meta-pill">16 TRACKS</span><span class="meta-pill">+ BONUS TRACK</span><span class="meta-pill" id="albumDuration">TOTAL —</span></div>
   <div class="hero-buttons"><button class="primary" id="playAll"><svg aria-hidden="true"><use href="#ic-play"></use></svg><span>アルバムを再生</span></button><button class="secondary" id="showTracks">曲一覧を見る ↓</button></div>
@@ -93,7 +93,7 @@ function updateSelection(){document.querySelectorAll('.track').forEach(row=>{con
 function setMediaSession(t){if(!('mediaSession' in navigator))return;try{navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:'XENO',album:'AFTERWORD',artwork:[{src:new URL(t.cover,location.href).href,sizes:'1536x1536',type:t.cover.endsWith('.jpg')?'image/jpeg':'image/png'}]});}catch(e){} }
 async function play(){if(!initialized){loadTrack(0,true);return;}try{await AUDIO.play();}catch(e){playing=false;updatePlayIcon();updateSelection();showStatus('音声を再生できません。ZIPを展開して index.html を開くか、Webサーバーで公開してください。');}}
 function pause(){AUDIO.pause()}
-function loadTrack(idx,shouldPlay=false){if(idx<0||idx>=TRACKS.length)return;current=idx;initialized=true;const t=TRACKS[current];const wasPlaying=playing;AUDIO.pause();AUDIO.src=t.src;AUDIO.load();$('activeCover').src=t.cover;$('activeTitle').textContent=t.title;$('activeArtist').textContent=t.bonus?'XENO · BONUS TRACK':'XENO · AFTERWORD';$('totalTime').textContent=fmt(t.seconds);$('currentTime').textContent='0:00';$('seek').value=0;$('seek').style.setProperty('--fill','0%');document.title=`${t.title} | AFTERWORD`;
+function loadTrack(idx,shouldPlay=false){if(idx<0||idx>=TRACKS.length)return;current=idx;initialized=true;const t=TRACKS[current];const wasPlaying=playing;AUDIO.pause();AUDIO.src=t.src;AUDIO.load();$('activeCover').src=t.cover;$('heroCover').src=t.cover;$('heroCover').alt=`${t.title} のジャケット`;$('activeTitle').textContent=t.title;$('activeArtist').textContent=t.bonus?'XENO · BONUS TRACK':'XENO · AFTERWORD';$('totalTime').textContent=fmt(t.seconds);$('currentTime').textContent='0:00';$('seek').value=0;$('seek').style.setProperty('--fill','0%');document.title=`${t.title} | AFTERWORD`;
 setMediaSession(t);updateSelection();if(shouldPlay||wasPlaying)play();}
 function nextTrack(automatic=false){if(repeat==='one'&&automatic){AUDIO.currentTime=0;play();return;}
 let idx;if(shuffle&&TRACKS.length>1){idx=current;while(idx===current)idx=Math.floor(Math.random()*TRACKS.length);}else{idx=current+1;if(idx>=TRACKS.length){if(repeat==='all')idx=0;else{pause();AUDIO.currentTime=0;return;}}}loadTrack(idx,true);}
