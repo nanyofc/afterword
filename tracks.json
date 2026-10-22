@@ -1,0 +1,138 @@
+[
+  {
+    "number": 1,
+    "title": "ルミナス",
+    "src": "audio/01.mp3",
+    "cover": "covers/01.png",
+    "seconds": 301.2,
+    "bonus": false
+  },
+  {
+    "number": 2,
+    "title": "OFF SCRIPT",
+    "src": "audio/02.mp3",
+    "cover": "covers/02.png",
+    "seconds": 226.632,
+    "bonus": false
+  },
+  {
+    "number": 3,
+    "title": "喝采",
+    "src": "audio/03.mp3",
+    "cover": "covers/03.png",
+    "seconds": 196.68,
+    "bonus": false
+  },
+  {
+    "number": 4,
+    "title": "クロノス",
+    "src": "audio/04.mp3",
+    "cover": "covers/04.png",
+    "seconds": 229.68,
+    "bonus": false
+  },
+  {
+    "number": 5,
+    "title": "DETOUR",
+    "src": "audio/05.mp3",
+    "cover": "covers/05.png",
+    "seconds": 219.984,
+    "bonus": false
+  },
+  {
+    "number": 6,
+    "title": "それでも君を。",
+    "src": "audio/06.mp3",
+    "cover": "covers/06.png",
+    "seconds": 323.304,
+    "bonus": false
+  },
+  {
+    "number": 7,
+    "title": "BEFORE I FORGET",
+    "src": "audio/07.mp3",
+    "cover": "covers/07.png",
+    "seconds": 246.84,
+    "bonus": false
+  },
+  {
+    "number": 8,
+    "title": "PANDORA",
+    "src": "audio/08.mp3",
+    "cover": "covers/08.png",
+    "seconds": 236.04,
+    "bonus": false
+  },
+  {
+    "number": 9,
+    "title": "アンブラ",
+    "src": "audio/09.mp3",
+    "cover": "covers/09.png",
+    "seconds": 255.024,
+    "bonus": false
+  },
+  {
+    "number": 10,
+    "title": "絶望の旋律",
+    "src": "audio/10.mp3",
+    "cover": "covers/10.png",
+    "seconds": 333.24,
+    "bonus": false
+  },
+  {
+    "number": 11,
+    "title": "不可逆",
+    "src": "audio/11.mp3",
+    "cover": "covers/11.png",
+    "seconds": 252.312,
+    "bonus": false
+  },
+  {
+    "number": 12,
+    "title": "RE:VERSE",
+    "src": "audio/12.mp3",
+    "cover": "covers/12.png",
+    "seconds": 231.24,
+    "bonus": false
+  },
+  {
+    "number": 13,
+    "title": "HARUKAGE",
+    "src": "audio/13.mp3",
+    "cover": "covers/13.jpg",
+    "seconds": 234.0,
+    "bonus": false
+  },
+  {
+    "number": 14,
+    "title": "カムパネルラ",
+    "src": "audio/14.mp3",
+    "cover": "covers/14.png",
+    "seconds": 232.56,
+    "bonus": false
+  },
+  {
+    "number": 15,
+    "title": "OUTLIER",
+    "src": "audio/15.mp3",
+    "cover": "covers/15.png",
+    "seconds": 228.744,
+    "bonus": false
+  },
+  {
+    "number": 16,
+    "title": "GIFT OF TIME",
+    "src": "audio/16.mp3",
+    "cover": "covers/16.png",
+    "seconds": 273.624,
+    "bonus": false
+  },
+  {
+    "number": 17,
+    "title": "奉仕活動☆タダ働き部",
+    "src": "audio/17.mp3",
+    "cover": "covers/album.png",
+    "seconds": 320.832,
+    "bonus": true
+  }
+]
