@@ -2,9 +2,12 @@
 <html lang="ja"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#130a20">
-<meta name="description" content="AFTERWORD — XENO 1st ALBUM。全16曲＋ボーナストラックを収録した専用ミュージックプレイヤー。">
+<meta name="description" content="物語を、音楽に。XENOは独自の世界観を描く音楽プロジェクト。1st ALBUM『AFTERWORD』公開中。メジャーデビューに向けてボーカリスト募集中。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XENO | MUSIC">
+<meta property="og:description" content="物語を、音楽に。独自の世界観を描く音楽プロジェクト。1st ALBUM『AFTERWORD』公開中。">
 <link rel="icon" href="covers/album.png" type="image/png">
-<title>AFTERWORD | XENO</title>
+<title>XENO | MUSIC</title>
 <style>
 :root{color-scheme:dark;--bg:#0c0913;--panel:#181020;--muted:#a8a0b7;--border:#342845;--accent:#bc84fa;--text:#fff9ff;--player-h:112px}
 *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,"Yu Gothic",sans-serif;-webkit-font-smoothing:antialiased}
@@ -17,7 +20,7 @@ svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke
 .topnote{font-size:10px;color:#b8a6c7;text-transform:uppercase;letter-spacing:.28em}.tag{color:#d3b6f1;border:1px solid #ae8fc24c;border-radius:100px;padding:7px 12px;font-size:10px;letter-spacing:.14em}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.98fr);align-items:center;gap:clamp(28px,5vw,88px);padding:50px 0 60px}
 .coverframe{position:relative;width:100%;max-width:550px;isolation:isolate}.coverframe::after{content:"";position:absolute;z-index:-1;left:8%;right:8%;bottom:-13%;height:33%;filter:blur(36px);background:#742ca685}.album-cover{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:1px solid #bb82f846;box-shadow:0 24px 70px #0009,0 0 0 7px #bd76ef0c;image-rendering:auto}
-.eyebrow{color:#c6a0e8;font-size:11px;letter-spacing:.26em;font-weight:700}.hero h1{font-size:clamp(42px,5.1vw,81px);font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.025em;line-height:.98;margin:18px 0 15px}.hero .byline{color:#c7aad7;font-size:12px;letter-spacing:.28em;margin:0 0 32px}.description{color:#d4cbdb;font-size:14px;line-height:2.12;max-width:440px;margin:0 0 31px}.metadata{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}.meta-pill{border:1px solid #89719a66;color:#e2d5eb;border-radius:100px;padding:8px 13px;font-size:11px;letter-spacing:.09em}
+.eyebrow{color:#c6a0e8;font-size:11px;letter-spacing:.26em;font-weight:700}.hero h1{font-size:clamp(42px,5.1vw,81px);font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.025em;line-height:.98;margin:18px 0 15px}.hero .byline{color:#c7aad7;font-size:12px;letter-spacing:.28em;margin:0 0 32px}.description{color:#d4cbdb;font-size:14px;line-height:2.12;max-width:440px;margin:0 0 31px;white-space:pre-line}.metadata{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}.meta-pill{border:1px solid #89719a66;color:#e2d5eb;border-radius:100px;padding:8px 13px;font-size:11px;letter-spacing:.09em}
 .hero-buttons{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.primary{border:none;border-radius:999px;background:linear-gradient(120deg,#e7c3ff,#a865ed);color:#1d102a;font-weight:800;display:flex;gap:11px;align-items:center;justify-content:center;padding:15px 25px;min-height:52px;box-shadow:0 10px 24px #ab4eff29}.primary:hover{filter:brightness(1.07)}.secondary{background:#ffffff0a;border:1px solid #af9abb55;border-radius:100px;color:#efe4f7;padding:14px 20px;min-height:52px}.secondary:hover{background:#ffffff14}
 .sectionhead{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-bottom:19px}.sectionhead h2{font-size:22px;font-weight:650;letter-spacing:.055em;margin:0}.sectionhead p{font-size:12px;color:#a798b5;margin:0}
 .tracklist{overflow:hidden;border:1px solid var(--border);border-radius:18px;background:linear-gradient(120deg,#ffffff08,#ffffff02);backdrop-filter:blur(13px)}
@@ -48,6 +51,7 @@ input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;
 .cover-hint{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:17px;letter-spacing:.22em;color:#b7a4c6;font-size:10px;white-space:nowrap}.cover-hint .switch-arrows{color:#d7a6fa;font-size:18px;line-height:1}.cover-hint .mode-label{opacity:.55;transition:opacity .2s,color .2s}.cover-hint .mode-label.is-active{opacity:1;color:#dfb5fb}.cover-hint-tap{margin-left:10px;letter-spacing:.12em;opacity:.67;font-size:8px}
 .coming-soon{min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 15px 130px}.soon-eyebrow{font-size:11px;letter-spacing:.3em;color:#c6a0e8}.coming-soon h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(43px,8vw,88px);font-weight:400;line-height:1.1;margin:28px 0 15px}.soon-status{font-size:13px;letter-spacing:.34em;color:#d2a5f3}.soon-description{font-size:13px;color:#c9bcd2;line-height:2;margin:16px 0 35px}.soon-back{padding:13px 24px}
 @media(max-width:640px){.release-menu{top:calc(100% + 12px)}.cover-hint{margin-top:15px;font-size:9px;gap:6px}.cover-hint-tap{font-size:8px;margin-left:6px}.coming-soon{min-height:50vh;padding:80px 10px 115px}.soon-description{font-size:12px}}
+.description::first-line{font-weight:700;color:#f1d6ff}
 </style>
 </head><body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
@@ -79,7 +83,13 @@ input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;
     <div class="cover-hint" aria-hidden="true"><span id="albumModeLabel" class="mode-label is-active">ALBUM</span><span class="switch-arrows">⇄</span><span id="trackModeLabel" class="mode-label">TRACK</span> <span class="cover-hint-tap">TAP TO SWITCH</span></div>
   </div>
   <div class="hero-text"><div class="eyebrow" id="albumEyebrow">XENO · 1ST ALBUM</div><h1 id="albumtitle">AFTERWORD</h1><p class="byline" id="albumCredits">WORDS &amp; MUSIC BY SHOTA ARASHIDA</p>
-  <p class="description" id="albumDescription">さまざまな物語から生まれた全16曲と、特別なボーナストラックを収録。<br>現在、ボーカリスト募集中。</p>
+  <p class="description" id="albumDescription">物語を、音楽に。『XENO』
+独自の世界観を描く音楽プロジェクト。
+歌詞には原作を紐解くヒントを散りばめ、音楽を聴くだけでなく、物語を読み解く楽しさも届けます。
+
+1st ALBUM『AFTERWORD』は、さまざまな物語から生まれた全16曲と、特別なボーナストラックを収録。
+
+メジャーデビューに向けて、ボーカル募集中。</p>
   <div class="metadata"><span class="meta-pill" id="trackCount">16 TRACKS</span><span class="meta-pill" id="bonusCount">+ BONUS TRACK</span><span class="meta-pill" id="albumDuration">TOTAL —</span></div>
   <div class="hero-buttons"><button class="primary" id="playAll"><svg aria-hidden="true"><use href="#ic-play"></use></svg><span>アルバムを再生</span></button><button class="secondary" id="showTracks">曲一覧を見る ↓</button></div>
   </div>
@@ -121,7 +131,7 @@ const RELEASES = {
   afterword: {
     label:'1st ALBUM',title:'AFTERWORD',eyebrow:'XENO · 1ST ALBUM',
     credits:'WORDS & MUSIC BY SHOTA ARASHIDA',
-    description:'さまざまな物語から生まれた全16曲と、特別なボーナストラックを収録。\n現在、ボーカリスト募集中。',
+    description:'物語を、音楽に。『XENO』\n独自の世界観を描く音楽プロジェクト。\n歌詞には原作を紐解くヒントを散りばめ、音楽を聴くだけでなく、物語を読み解く楽しさも届けます。\n\n1st ALBUM『AFTERWORD』は、さまざまな物語から生まれた全16曲と、特別なボーナストラックを収録。\n\nメジャーデビューに向けて、ボーカル募集中。',
     cover:'covers/album.png', tracks:TRACKS
   },
   second: {
@@ -223,9 +233,9 @@ function showRelease(id){
     $('seek').value=0;$('seek').style.setProperty('--fill','0%');
     document.querySelector('.footer').textContent=`${r.title} — ${r.eyebrow}`;
     renderTrackList();setMainArtwork();updatePlayIcon();updateSelection();
-    document.title=`${r.title} | XENO`;
+    document.title=id==='afterword'?'XENO | MUSIC':`${r.title} | XENO MUSIC`;
   }else{
-    document.title=initialized?`${ACTIVE_TRACKS[current].title} | ${r.title}`:`${r.title} | XENO`;
+    document.title=initialized?`${ACTIVE_TRACKS[current].title} | ${r.title}`:(id==='afterword'?'XENO | MUSIC':`${r.title} | XENO MUSIC`);
   }
   window.scrollTo({top:0,behavior:'instant'});
 }
